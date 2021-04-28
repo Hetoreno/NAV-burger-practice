@@ -1,0 +1,33 @@
+.one{
+    background:#767676;
+}
+
+.two{
+    background:#ec7d7d;
+}
+
+.three{
+    background:#6ba5f1;
+}
+.mobile{
+    display: none;
+}
+.burger{
+    display: none;
+}
+
+.headi{
+    width:80%;
+    margin: auto;
+    
+    nav{
+        @include flex(center,space-between,row);
+        flex-wrap: wrap;
+    }
+
+    ul{
+        @include flex(center,center,row);
+    }
+}
+
+

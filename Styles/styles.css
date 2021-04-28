@@ -1,0 +1,186 @@
+.one {
+  background: #767676;
+}
+
+.two {
+  background: #ec7d7d;
+}
+
+.three {
+  background: #6ba5f1;
+}
+
+.mobile {
+  display: none;
+}
+
+.burger {
+  display: none;
+}
+
+.headi {
+  width: 80%;
+  margin: auto;
+}
+
+.headi nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.headi ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+li {
+  list-style: none;
+  margin: 0rem 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  /* First NAV */
+  .main-nav .nav-links, .main-nav .social-links {
+    display: none;
+  }
+  .mobile .burger-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mobile .burger-links li {
+    margin: 1rem;
+    border-bottom: 2px solid white;
+  }
+  .mobile .burger-links a {
+    color: white;
+  }
+  .mobile .burger-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 2rem;
+  }
+  .mobile .burger-social a {
+    font-size: 2rem;
+    color: white;
+  }
+  .burger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .burger span {
+    background: red;
+    margin: 0.5rem 0.5rem;
+    padding: 0.2rem 1.3rem;
+    display: block;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+  }
+  .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background: black;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    align-items: center;
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  .trans {
+    background: rgba(0, 0, 0, 0.459);
+  }
+  .link-open {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+  .toggle .line1 {
+    -webkit-transform: rotateZ(45deg) translateY(300%);
+            transform: rotateZ(45deg) translateY(300%);
+    background: white;
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    background: white;
+    -webkit-transform: rotateZ(-45deg) translateY(-300%);
+            transform: rotateZ(-45deg) translateY(-300%);
+  }
+}
+/*# sourceMappingURL=styles.css.map */

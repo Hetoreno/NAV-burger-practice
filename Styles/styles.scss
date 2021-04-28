@@ -1,0 +1,97 @@
+@mixin flex($align,$justify,$direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@import "nav";
+@import "global";
+
+@media screen and (max-width:1024px) {
+
+    /* First NAV */
+        .main-nav{
+            .nav-links, .social-links{
+                display: none;
+            } 
+        }
+    
+    .mobile{
+        
+        .burger-links{
+            @include flex(flex-start,center,column);
+            li{
+                margin:1rem;
+                border-bottom: 2px solid white;
+            }
+            a{
+                color:white;
+            }
+        }
+
+        .burger-social{
+            @include flex(center,flex-start,row);
+            margin:2rem;
+            a{
+                font-size: 2rem;
+                color:white;
+            }
+        }
+    }
+
+    .burger{
+        cursor: pointer;
+        display: block;
+        position: relative;
+        z-index: 1;
+        
+        span{
+            background:red;
+            margin:0.5rem 0.5rem;
+            padding:0.2rem 1.3rem;
+            display: block;
+            transition: all 0.5s ease-in;
+        }
+    }
+
+    .mobile{
+        @include flex(center,center,row);
+        background:black;
+        height:100%;
+        width: 100%;
+        position: fixed;
+        top:0;
+        left:100%;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.5s ease-in;
+    }
+    
+    .trans{
+        background:rgba(0, 0, 0, 0.459);
+
+    }
+
+    .link-open{
+        transform: translate(-100%);
+    }
+
+    .toggle{
+        .line1{
+            transform: rotateZ(45deg) translateY(300%);
+            background: white;
+        }
+
+        .line2{
+            opacity: 0;
+        }
+
+        .line3{
+            background: white;
+            transform: rotateZ(-45deg) translateY(-300%);
+        }
+    }
+
+    
+}
